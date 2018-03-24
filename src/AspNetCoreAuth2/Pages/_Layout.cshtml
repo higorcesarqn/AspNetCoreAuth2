@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ASP.NET Core Auth2.0</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bulma-0.6.2/css/bulma.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/lib/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    </environment>
+
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
+              asp-fallback-href="~/lib/bulma-0.6.2/css/bulma.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+              asp-fallback-href="~/lib/font-awesome/font-awesome.min.css"
+              asp-append-version="true" />
+
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    
+    @RenderSection("css", required: false)
+</head>
+
+<body>
+    @RenderBody()
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/font-awesome/all.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+                asp-fallback-src="~/lib/font-awesome/all.js">
+        </script>
+
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

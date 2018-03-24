@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h2 class="title larger-text">
+                ASP.NET Core Auth2.0
+            </h2>
+            <h1 class="larger-text">
+                @User.Identity.Name
+            </h1>
+            <h2 class="subtitle">
+                You are authenticated!
+            </h2>
+            <form method="post">
+                <p>
+                    <button class="button is-primary is-inverted is-outlined is-large is-fullwidth" asp-page="/Account/Login" asp-page-handler="Logout">LOGOFF</button>
+                    <br>
+                </p>
+            </form>
+            
+        </div>
+    </div>
+</section>
